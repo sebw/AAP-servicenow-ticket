@@ -6,6 +6,12 @@
   collections:
   - servicenow.itsm
 
+  vars:
+    short: "User is not receiving email"
+    long: "User has been unable to receive email for the past 15 minutes"
+    impact: "low"
+    urgency: "low"
+
   vars_files:
   - vault.yml
 
@@ -20,12 +26,10 @@
         password: "{{ vault_snow_pass }}"
       state: new
       caller: admin
-      short_description: User is not receiving email
-      description: User has been unable to receive email for the past 15 minutes
-      impact: low
-      urgency: low
-      other:
-        expected_start: 2023-12-31
+      short_description: "{{ short }}" 
+      description: "{{ long }}"
+      impact: "{{ impact }}"
+      urgency: "{{ urgency }}"
     register: output
 
   - name: Display incident number
