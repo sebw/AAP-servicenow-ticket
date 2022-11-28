@@ -16,3 +16,11 @@ vault_snow_pass: your-password
 
 Create a Vault credential with the vault password for the job template to be able to decrypt the vault.
 
+The job can take several parameters that can be overidden:
+
+- short: a short description of the problem
+- long: a longer description of the problem
+- impact: low, medium or high
+- urgency: low, medium or high
+
+Make sure to tick the "Prompt on launch" box for variables.
