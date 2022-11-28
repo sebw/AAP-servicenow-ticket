@@ -27,5 +27,25 @@ Make sure to tick the "Prompt on launch" box for variables.
 
 You can create surveys to take those parameters or implement this job as a step in a workflow when something fails.
 
+## Screenshots
 
+Creation of the job (please note the vault credential)
+
+![](https://raw.githubusercontent.com/sebw/AAP-servicenow-ticket/main/screenshots/1.png)
+
+Creating an incident using a survey (the job can also be called by an external entity or part of a workflow and pass `extra_vars`)
+
+![](https://raw.githubusercontent.com/sebw/AAP-servicenow-ticket/main/screenshots/2.png)
+
+Ticket has been created and we have the incident number
+
+![](https://raw.githubusercontent.com/sebw/AAP-servicenow-ticket/main/screenshots/3.png)
+
+Searching the incident in ServiceNow gives us the short description
+
+![](https://raw.githubusercontent.com/sebw/AAP-servicenow-ticket/main/screenshots/4.png)
+
+The full description shows the short and long description and the urgency and priority that have been specified in the survey
+
+![](https://raw.githubusercontent.com/sebw/AAP-servicenow-ticket/main/screenshots/5.png)
 
