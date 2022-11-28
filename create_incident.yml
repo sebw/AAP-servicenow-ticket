@@ -28,6 +28,7 @@
         expected_start: 2023-12-31
     register: output
 
-  - debug:
-      var: output
+  - name: Display incident number
+    debug:
+      var: output.record.number
 
