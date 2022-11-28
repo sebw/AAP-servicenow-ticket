@@ -24,3 +24,8 @@ The job can take several parameters that can be overidden:
 - urgency: low, medium or high
 
 Make sure to tick the "Prompt on launch" box for variables.
+
+You can create surveys to take those parameters or implement this job as a step in a workflow when something fails.
+
+
+
