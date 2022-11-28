@@ -1,0 +1,29 @@
+---
+- name: create incident in servicenow
+  hosts: all
+  gather_facts: false
+
+  collections:
+  - servicenow.itsm
+
+  vars_files:
+  - vault.yml
+
+# https://github.com/ansible-collections/servicenow.itsm/blob/main/docs/servicenow.itsm.incident_module.rst
+
+  tasks:
+  - name: Create incident
+    servicenow.itsm.incident:
+      instance:
+        host: "{{ vault_snow_host }}"
+        username: "{{ vault_snow_user }}"
+        password: "{{ vault_snow_pass }}"
+      state: new
+      caller: admin
+      short_description: User is not receiving email
+      description: User has been unable to receive email for the past 15 minutes
+      impact: low
+      urgency: low
+      other:
+        expected_start: 2023-12-31
+
